@@ -3,8 +3,8 @@
 Some codes I put on Rosetta codes site.
 Mostly in Clojure, Racket, Haskell, and Julia.
 
-![alt tag](https://circleci.com/gh/squest/rosetta.svg?style=shield)
-[![CircleCI](https://circleci.com/gh/squest/rosetta.svg?style=svg)](https://circleci.com/gh/squest/rosetta)
+![alt tag](https://circleci.com/gh/squest/Rosetta.svg?style=shield)
+[![CircleCI](https://circleci.com/gh/squest/Rosetta.svg?style=svg)](https://circleci.com/gh/squest/rosetta)
 
 ## License
 
