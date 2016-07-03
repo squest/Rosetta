@@ -11,11 +11,15 @@ dependencies:
   override:
     - lein deps
     - lein sub -s "rosetta" deps
+  cache_directories:
+    - /usr/bin/racket
 
 ## Customize test commands
 test:
   override:
     - lein sub -s "rosetta" test
     - pwd 
-    - raco test -s "racket/sorting-test.rkt"
+    - raco test -r "racket/sorting-test.rkt"
+
+
 
