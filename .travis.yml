@@ -2,7 +2,6 @@ language: racket
 
 env: 
 - RACKET_VERSION=6.5
-- RACKET_VERSION=HEAD
 
 sudo: required
 
@@ -11,4 +10,4 @@ before_install:
 - cat travis-racket/install-racket.sh | bash 
 
 script: 
-- cd racket ; /usr/racket/bin/raco test -s "sorting-test.rkt"
+- cd Rosetta/racket ; /usr/racket/bin/raco test -s "sorting-test.rkt"
