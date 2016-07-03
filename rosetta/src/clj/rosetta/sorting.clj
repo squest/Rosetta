@@ -39,6 +39,18 @@
                       (recur cl1 rc2 (conj res c1))
                       (recur rc1 cl2 (conj res c2)))))))
 
-(defn time-it
+(defn isort
+  "Functional implementation of insertion sort. Prone to stack overflow."
+  [col]
+  (if (empty? col)
+    col
+    (loop [[fc & rc] (rest col) res [(first col)]]
+      (if fc
+        (let [[smaller larger]
+              (split-with #(neg? (compare % fc)) res)]
+          (recur rc (apply conj (vec smaller) fc larger)))
+        res))))
+
+(defn- time-it
   [f lst]
   (time (reduce + (f lst))))
