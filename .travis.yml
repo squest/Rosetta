@@ -9,9 +9,6 @@ before_install:
 - git clone https://github.com/greghendershott/travis-racket.git
 - cat travis-racket/install-racket.sh | bash 
 
-after_success:
-- cache: /usr/racket 
-
 script: 
 - pwd
 - /usr/racket/bin/raco test -s "racket/sorting-test.rkt"
