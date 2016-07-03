@@ -26,7 +26,7 @@
               (merge-sort second-half)))))
 
 (defn merge'
-  "Helper function for merging two sorted coll"
+  "Helper function for merging two sorted coll using tail recursion."
   [col1 col2]
   (cond
     (empty? col1) col2
