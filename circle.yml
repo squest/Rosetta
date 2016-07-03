@@ -5,6 +5,7 @@ machine:
   pre:
     - sudo apt-get install racket
     - which racket
+    - racket -v
 
 ## Customize dependencies
 dependencies:
