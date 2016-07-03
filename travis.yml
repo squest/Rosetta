@@ -1,0 +1,10 @@
+env:
+ - RACKET_VERSION=6.5
+ - RACKET_VERSION=HEAD
+
+before_install:
+- git clone https://github.com/greghendershott/travis-racket.git
+- cat travis-racket/install-racket.sh | bash 
+
+script: 
+- cd racket ; /usr/racket/bin/raco test -s "sorting-test.rkt"

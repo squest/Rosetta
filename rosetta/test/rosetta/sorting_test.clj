@@ -13,9 +13,10 @@
       (is (= (map str "abcdefghij")
              (quick-sort (map str (shuffle (apply list "abcdefghij"))))))
       (println "Make sure it doesnt cause stack overflow for large sequence")
-      (let [res (time (quick-sort (shuffle (range 5000))))]
-        (println "Time taken for merge-sort 5000 elements")
-        res)))
+      (let [lst (range 5000)
+            slst (shuffle lst)]
+        (println "Time taken for quick-sort 5000 elements")
+        (is (= lst (time (quick-sort slst)))))))
   (testing "mergesort for numbers, chars, and string"
     (let [lst (range 30)
           slst (shuffle lst)]
@@ -25,9 +26,10 @@
       (is (= (map str "abcdefghij")
              (merge-sort (map str (shuffle (apply list "abcdefghij"))))))
       (println "Make sure it doesnt cause stack overflow for large sequence")
-      (let [res (time (merge-sort (shuffle (range 5000))))]
+      (let [lst (range 5000)
+            slst (shuffle lst)]
         (println "Time taken for merge-sort 5000 elements")
-        res)))
+        (is (= lst (time (merge-sort slst)))))))
   (testing "insertion sort for numbers, chars, and string"
     (let [lst (range 30)
           slst (shuffle lst)]
@@ -37,9 +39,9 @@
       (is (= (map str "abcdefghij")
              (isort (map str (shuffle (apply list "abcdefghij"))))))
       (println "Make sure it doesnt cause stack overflow for large sequence")
-      (is (= (range 5000)
-             (let [res (time (isort (shuffle (range 5000))))]
-               (println "Time taken for isort 5000 elements")
-               res))))))
+      (let [lst (range 5000)
+            slst (shuffle lst)]
+        (println "Time taken for insertion sort 5000 elements")
+        (is (= lst (time (isort slst))))))))
 
 
