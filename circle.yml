@@ -2,15 +2,26 @@
 machine:
   java:
     version: oraclejdk8
+##  pre:
+##    - sudo apt-get update
+##    - sudo apt-get install racket
+##    - racket -v
 
 ## Customize dependencies
 dependencies:
   override:
     - lein deps
     - lein sub -s "rosetta" deps
+##  cache_directories:
+##    - /usr/bin/racket
 
 ## Customize test commands
 test:
   override:
     - lein sub -s "rosetta" test
+    - pwd 
+    - ls
+##    - raco test -r Racket/sorting-test.rkt
+
+
 
