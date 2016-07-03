@@ -3,8 +3,8 @@ machine:
   java:
     version: oraclejdk8
   pre:
-    - git clone https://github.com/greghendershott/travis-racket.git
-    - cat travis-racket/install-racket.sh | bash 
+    - sudo apt-get install racket
+    - which racket
 
 ## Customize dependencies
 dependencies:
@@ -17,5 +17,5 @@ test:
   override:
     - lein sub -s "rosetta" test
     - pwd 
-    - /usr/racket/bin/raco test -s "racket/sorting-test.rkt"
+    - raco test -s "racket/sorting-test.rkt"
 
