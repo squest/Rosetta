@@ -1,6 +1,8 @@
-env:
- - RACKET_VERSION=6.5
- - RACKET_VERSION=HEAD
+language: racket
+
+env: 
+- RACKET_VERSION=6.5
+- RACKET_VERSION=HEAD
 
 before_install:
 - git clone https://github.com/greghendershott/travis-racket.git
