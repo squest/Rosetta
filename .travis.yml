@@ -10,4 +10,4 @@ before_install:
 - cat travis-racket/install-racket.sh | bash 
 
 script: 
-- /usr/racket/bin/raco test -r "racket/sorting-test.rkt"
+- /usr/racket/bin/raco test -r racket/sorting-test.rkt
