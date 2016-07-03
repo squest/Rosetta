@@ -14,4 +14,4 @@ before_install:
 script: 
 - pwd
 - ls
-- /usr/racket/bin/raco test -r Rosetta/racket/sorting-test.rkt
+- raco test -r Racket/sorting-test.rkt

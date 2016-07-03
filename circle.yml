@@ -3,6 +3,7 @@ machine:
   java:
     version: oraclejdk8
   pre:
+    - sudo apt-get update
     - sudo apt-get install racket
     - which racket
     - racket -v
@@ -13,7 +14,7 @@ dependencies:
     - lein deps
     - lein sub -s "rosetta" deps
   cache_directories:
-    - /usr/racket/bin
+    - /usr/bin/racket
 
 ## Customize test commands
 test:
@@ -21,7 +22,7 @@ test:
     - lein sub -s "rosetta" test
     - pwd 
     - ls
-    - /usr/racket/bin/raco test -r racket/sorting-test.rkt
+    - raco test -r Racket/sorting-test.rkt
 
 
 
