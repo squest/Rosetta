@@ -20,6 +20,7 @@ test:
   override:
     - lein sub -s "rosetta" test
     - pwd 
+    - ls
     - /usr/racket/bin/raco test -r racket/sorting-test.rkt
 
 
