@@ -2,10 +2,9 @@
 machine:
   java:
     version: oraclejdk8
-
-pre:
-  - git clone https://github.com/greghendershott/travis-racket.git
-  - cat travis-racket/install-racket.sh | bash 
+  pre:
+    - git clone https://github.com/greghendershott/travis-racket.git
+    - cat travis-racket/install-racket.sh | bash 
 
 ## Customize dependencies
 dependencies:
