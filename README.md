@@ -6,6 +6,18 @@ Mostly in Clojure, Racket, Haskell, and Julia.
 ![alt tag](https://circleci.com/gh/squest/Rosetta.svg?style=shield)
 [![CircleCI](https://circleci.com/gh/squest/Rosetta.svg?style=svg)](https://circleci.com/gh/squest/rosetta)
 
+## Tasks
+
+##### Clojure
+
+- Sorting (quicksort, mergesort, insertion sort)  
+
+##### Haskell
+
+##### Julia
+
+##### Racket 
+
 ## License
 
 Copyright © 2016 whoever contribute to the code base
