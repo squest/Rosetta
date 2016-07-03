@@ -8,7 +8,6 @@ sudo: required
 before_install:
 - git clone https://github.com/greghendershott/travis-racket.git
 - cat travis-racket/install-racket.sh | bash 
-- which racket
 - racket -v
 
 script: 
