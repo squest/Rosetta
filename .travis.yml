@@ -8,9 +8,8 @@ sudo: required
 before_install:
 - git clone https://github.com/greghendershott/travis-racket.git
 - cat travis-racket/install-racket.sh | bash 
-- racket -v
 
 script: 
 - pwd
 - ls
-- raco test -r Racket/sorting-test.rkt
+- /usr/racket/bin/raco test -r Racket/sorting-test.rkt
