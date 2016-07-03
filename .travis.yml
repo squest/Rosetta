@@ -4,6 +4,8 @@ env:
 - RACKET_VERSION=6.5
 - RACKET_VERSION=HEAD
 
+sudo: required
+
 before_install:
 - git clone https://github.com/greghendershott/travis-racket.git
 - cat travis-racket/install-racket.sh | bash 
