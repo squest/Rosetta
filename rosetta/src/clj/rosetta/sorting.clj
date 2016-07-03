@@ -6,8 +6,8 @@
   (if (empty? col)
     []
     (let [x (first col)
-          smaller (filter #(<= % x) (rest col))
-          larger (filter #(> % x) (rest col))]
+          smaller (filter #(neg? (compare % x)) (rest col))
+          larger (filter #(>= (compare % x) 0) (rest col))]
       (concat (quick-sort smaller)
               [x]
               (quick-sort larger)))))
@@ -25,7 +25,7 @@
       (merge' (merge-sort first-half)
               (merge-sort second-half)))))
 
-(defn merge'
+(defn- merge'
   "Helper function for merging two sorted coll using tail recursion."
   [col1 col2]
   (cond
@@ -35,7 +35,7 @@
             (cond
               (nil? c1) (apply conj res c2 cl2)
               (nil? c2) (apply conj res c1 cl1)
-              :else (if (<= c1 c2)
+              :else (if (neg? (compare c1 c2))
                       (recur cl1 rc2 (conj res c1))
                       (recur rc1 cl2 (conj res c2)))))))
 
