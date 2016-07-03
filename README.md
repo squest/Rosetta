@@ -1,14 +1,14 @@
-# rosetta
+# Rosetta
 
-A Clojure library designed to ... well, that part is up to you.
+Some codes I put on Rosetta codes site.
+Mostly in Clojure, Racket, Haskell, and Julia.
 
-## Usage
-
-FIXME
+![alt tag](https://circleci.com/gh/squest/rosetta.svg?style=shield)
+[![CircleCI](https://circleci.com/gh/squest/rosetta.svg?style=svg)](https://circleci.com/gh/squest/rosetta)
 
 ## License
 
-Copyright © 2016 FIXME
+Copyright © 2016 whoever contribute to the code base
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
