@@ -4,14 +4,13 @@ machine:
     version: oraclejdk8
   ghc:
     version: 7.8.3
-  pre:
-    - sudo cabal update && sudo cabal install QuickCheck
 
 ## Customize dependencies
 dependencies:
   override:
     - lein deps
     - lein sub -s "rosetta" deps
+    - cabal update && cabal install QuickCheck
 
 ## Customize test commands
 test:
