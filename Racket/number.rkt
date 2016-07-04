@@ -6,7 +6,7 @@
 	(or (empty? res)
 	    (iter b c (first res) (rest res)))
 	false))
-  (iter (first lst) (second lst) (third lst)))
+  (iter (first lst) (second lst) (third lst) (drop res 3)))
 
 (define (fibo n-or-pred)
   (define (iter-n a b i res)
