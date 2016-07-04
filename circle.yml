@@ -20,7 +20,7 @@ test:
     - lein sub -s "rosetta" test
     - pwd 
     - ls
-    - cd Haskell ; ghc -O Sorting.hs ; runhaskell SortingTest.hs
+    - cd Haskell ; cabal install QuickCheck ; ghc -O Sorting.hs ; runhaskell SortingTest.hs
 
 
 
