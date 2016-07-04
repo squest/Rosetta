@@ -2,8 +2,7 @@
 
 (require rackunit "sorting.rkt")
 
-(test-case
- "Testing quicksort"
+(define-test-suite qsort-test
 
  (display "Testing quicksort\n")
 
@@ -21,8 +20,7 @@
 	(slst (shuffle lst))]
    (check-equal? (time (quick-sort slst)) lst)))
 
-(test-case
- "Testing mergesort"
+(define-test-suite msort-test
 
  (display "Testing mergesort\n")
 
@@ -40,8 +38,7 @@
 	(slst (shuffle lst))]
    (check-equal? (time (merge-sort slst)) lst)))
 
-(test-case
- "Testing insertion sort"
+(define-test-suite isort-test
 
  (display "Testing insertion sort\n")
 
@@ -58,6 +55,11 @@
  (let* [(lst (range 5000))
 	(slst (shuffle lst))]
    (check-equal? (time (isort slst)) lst)))
+
+(define/provide-test-suite sorting-tests
+  isort-test
+  qsort-test
+  msort-test)
 
 
 
