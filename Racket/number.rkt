@@ -20,3 +20,5 @@
   (if (number? n-or-pred)
       (iter-n 1 1 0 '[])
       (iter-pred 1 1 '[])))
+
+(provide fibo fibo?)
