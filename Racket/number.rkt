@@ -14,7 +14,7 @@
 	(reverse res)
 	(iter-n b (+ a b) (+ 1 i) (cons a res))))
   (define (iter-pred a b res)
-    (if (pred a)
+    (if (n-or-pred a)
 	(iter-pred b (+ a b) (cons a res))
 	(reverse res)))
   (if (number? n-or-pred)
