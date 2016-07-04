@@ -23,5 +23,5 @@
 
  (let [(n (round (* 10000 (random))))]
    (display "Time taken to generate random numbers of fibo numbers\n")
-   (check-equal? (time (fibo? (fibo-list n))) true)))
+   (check-equal? (time (fibo? (fibo n))) true)))
 
