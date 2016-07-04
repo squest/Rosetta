@@ -4,6 +4,8 @@ machine:
     version: oraclejdk8
   ghc:
     version: 7.8.3
+  pre:
+    sudo cabal update && sudo cabal install QuickCheck
 
 ## Customize dependencies
 dependencies:
@@ -17,7 +19,7 @@ test:
     - lein sub -s "rosetta" test
     - pwd 
     - ls
-    - cd Haskell ; cabal update && cabal install QuickCheck ; ghc -O Sorting.hs ; runhaskell SortingTest.hs
+    - cd Haskell ; ghc -O Sorting.hs ; runhaskell SortingTest.hs
 
 
 
