@@ -2,8 +2,7 @@
 
 (require rackunit "number.rkt")
 
-(test-case
- "Testing fibonacci list"
+(define/provide-test-suite fibo-test
 
  (display "Testing fibonacci functions\n")
 

@@ -12,4 +12,4 @@ before_install:
 script: 
 - pwd
 - ls
-- /usr/racket/bin/raco test -r Racket/sorting-test.rkt Racket/number-test.rkt
+- /usr/racket/bin/raco test -r Racket/all-tests.rkt
