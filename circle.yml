@@ -2,18 +2,15 @@
 machine:
   java:
     version: oraclejdk8
-##  pre:
-##    - sudo apt-get update
-##    - sudo apt-get install racket
-##    - racket -v
+  ghc:
+    version: 7.8.3
 
 ## Customize dependencies
 dependencies:
   override:
     - lein deps
     - lein sub -s "rosetta" deps
-##  cache_directories:
-##    - /usr/bin/racket
+    - cabal update && cabal install QuickCheck
 
 ## Customize test commands
 test:
@@ -21,7 +18,7 @@ test:
     - lein sub -s "rosetta" test
     - pwd 
     - ls
-##    - raco test -r Racket/sorting-test.rkt
+    - cd Haskell ; ghc -O Sorting.hs ; runhaskell SortingTest.hs
 
 
 
