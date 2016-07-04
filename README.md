@@ -12,13 +12,19 @@ Mostly in Clojure, Racket, Haskell, and Julia.
 
 ##### Clojure
 
-- Sorting (quicksort, mergesort, insertion sort)  
+- Sorting (Quick sort, Merge sort, Insertion sort)
+- Number theory
+  - Lazy Fibo sequence
 
 ##### Haskell
+
+- Sorting (Quick sort, Merge sort, Insertion sort)
 
 ##### Julia
 
 ##### Racket 
+
+- Sorting (Quick sort, Merge sort, Insertion sort)
 
 ## License
 
