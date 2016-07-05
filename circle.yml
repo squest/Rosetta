@@ -19,6 +19,7 @@ test:
     - pwd 
     - ls
     - cd Haskell ; ghc -O Sorting.hs ; runhaskell SortingTest.hs
-
+  post:
+    - bash <(curl -s https://codecov.io/bash)
 
 
