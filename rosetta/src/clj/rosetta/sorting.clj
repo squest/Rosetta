@@ -12,19 +12,6 @@
               [x]
               (quick-sort larger)))))
 
-(declare merge')
-
-(defn merge-sort
-  "Functional implementation of merge-sort"
-  [col]
-  (if (<= (count col) 1)
-    col
-    (let [ctr (count col)
-          [first-half second-half]
-          (split-at (quot ctr 2) col)]
-      (merge' (merge-sort first-half)
-              (merge-sort second-half)))))
-
 (defn- merge'
   "Helper function for merging two sorted coll using tail recursion."
   [col1 col2]
@@ -39,6 +26,17 @@
                       (recur cl1 rc2 (conj res c1))
                       (recur rc1 cl2 (conj res c2)))))))
 
+(defn merge-sort
+  "Functional implementation of merge-sort"
+  [col]
+  (if (<= (count col) 1)
+    col
+    (let [ctr (count col)
+          [first-half second-half]
+          (split-at (quot ctr 2) col)]
+      (merge' (merge-sort first-half)
+              (merge-sort second-half)))))
+
 (defn isort
   "Functional implementation of insertion sort. Prone to stack overflow."
   [col]
@@ -51,6 +49,4 @@
           (recur rc (apply conj (vec smaller) fc larger)))
         res))))
 
-(defn- time-it
-  [f lst]
-  (time (reduce + (f lst))))
+
