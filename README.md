@@ -9,6 +9,11 @@ Mostly in Clojure, Racket, Haskell, and Julia.
 [![Build Status](https://snap-ci.com/squest/Rosetta/branch/master/build_image)](https://snap-ci.com/squest/Rosetta/branch/master)
 [![Build Status](https://semaphoreci.com/api/v1/squest/rosetta-2/branches/master/badge.svg)](https://semaphoreci.com/squest/rosetta-2)
 
+#### Code coverage
+
+[![codecov](https://codecov.io/gh/squest/Rosetta/branch/master/graph/badge.svg)](https://codecov.io/gh/squest/Rosetta)
+
+
 ## Tasks
 
 ##### Clojure
