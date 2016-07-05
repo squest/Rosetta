@@ -51,6 +51,4 @@
           (recur rc (apply conj (vec smaller) fc larger)))
         res))))
 
-(defn- time-it
-  [f lst]
-  (time (reduce + (f lst))))
+
