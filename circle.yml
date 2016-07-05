@@ -19,6 +19,9 @@ test:
     - pwd 
     - ls
     - cd Haskell ; ghc -O Sorting.hs ; runhaskell SortingTest.hs
+  post:
+    - cd rosetta ; CLOVERAGE_VERSION=1.0.7-SNAPSHOT lein cloverage --codecov
+    - bash <(curl -s https://codecov.io/bash) -f target/coverage/codecov.json
 
 
 
