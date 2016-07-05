@@ -20,7 +20,7 @@ test:
     - ls
     - cd Haskell ; ghc -O Sorting.hs ; runhaskell SortingTest.hs
   post:
-    - cd rosetta ; lein cloverage
+    - cd rosetta ; lein cloverage --codecov
     - bash <(curl -s https://codecov.io/bash) -f target/coverage/codecov.json
 
 
